@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Lr7_omr" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#47A76A</item>
+    </style>
+
+    <style name="Theme.Lr7_omr" parent="Base.Theme.Lr7_omr" />
+</resources>

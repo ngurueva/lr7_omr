@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/press_start_2p"
+            android:text="Музыкальное приложение"
+            android:textColor="#2D5619"
+            android:textSize="24dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="383dp"
+        android:layout_height="719dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        tools:context=".EditSongActivity">
+
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:ems="10"
+            android:hint="Название"
+            android:inputType="text"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="366dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Автор"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="366dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Альбом"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textAlignment="center" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Избранное" />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/checkBox"
+            android:clickable="true"
+            android:fontFamily="@font/rubik_mono_one"
+            android:text="Добавить"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#000000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnSaveCSV"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/button"
+            android:clickable="true"
+            android:fontFamily="@font/rubik_mono_one"
+            android:text="Сохранить csv"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#000000"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnOpenCSV"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/btnSaveCSV"
+            android:layout_marginTop="2dp"
+            android:clickable="true"
+            android:fontFamily="@font/rubik_mono_one"
+            android:text="Открыть csv"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#000000"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnSavePDF"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/btnOpenCSV"
+            android:clickable="true"
+            android:fontFamily="@font/rubik_mono_one"
+            android:text="Сохранить PDF"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#000000"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:id="@+id/btnOpenPDF"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/btnSavePDF"
+            android:layout_marginTop="2dp"
+            android:clickable="true"
+            android:fontFamily="@font/rubik_mono_one"
+            android:text="Открыть PDF"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#000000"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="293dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
