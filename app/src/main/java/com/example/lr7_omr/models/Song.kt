@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 @Entity
 data class Song(
     @PrimaryKey(autoGenerate = true) val idSong: Int = 0,
-    val albumIdAlbum: Int, // FK на Album
-    val authorIdAuthor: Int, // FK на Author
+    val albumIdAlbum: Int,
+    val authorIdAuthor: Int,
     val title: String,
     val isFavorite: Boolean = false
 )

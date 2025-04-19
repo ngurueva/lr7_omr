@@ -106,59 +106,28 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/btnSaveCSV"
+            android:id="@+id/btnOpnCSV"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_below="@id/button"
-            android:clickable="true"
+            android:text="Открыть CSV"
+            android:textSize="14sp"
             android:fontFamily="@font/rubik_mono_one"
-            android:text="Сохранить csv"
-            android:textAllCaps="true"
             android:textColor="#FFFFFF"
-            android:textColorLink="#000000"
-            android:textSize="14sp" />
+            android:textAllCaps="true"
+            android:layout_marginTop="4dp" />
 
         <Button
-            android:id="@+id/btnOpenCSV"
+            android:id="@+id/btnOpnPDF"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_below="@id/btnSaveCSV"
-            android:layout_marginTop="2dp"
-            android:clickable="true"
-            android:fontFamily="@font/rubik_mono_one"
-            android:text="Открыть csv"
-            android:textAllCaps="true"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#000000"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/btnSavePDF"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_below="@id/btnOpenCSV"
-            android:clickable="true"
-            android:fontFamily="@font/rubik_mono_one"
-            android:text="Сохранить PDF"
-            android:textAllCaps="true"
-            android:textColor="#FFFFFF"
-            android:textColorLink="#000000"
-            android:textSize="14sp" />
-
-
-        <Button
-            android:id="@+id/btnOpenPDF"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_below="@id/btnSavePDF"
-            android:layout_marginTop="2dp"
-            android:clickable="true"
-            android:fontFamily="@font/rubik_mono_one"
             android:text="Открыть PDF"
-            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:fontFamily="@font/rubik_mono_one"
             android:textColor="#FFFFFF"
-            android:textColorLink="#000000"
-            android:textSize="14sp" />
+            android:textAllCaps="true"
+            android:layout_marginTop="2dp" />
+
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"

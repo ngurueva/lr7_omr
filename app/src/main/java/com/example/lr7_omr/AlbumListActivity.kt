@@ -61,7 +61,7 @@ class AlbumListActivity : AppCompatActivity() {
                 // Открытие экрана редактирования альбома
                 val intent = Intent(this@AlbumListActivity, EditAuthorAlbumActivity::class.java)
                 intent.putExtra("type", "album")
-                intent.putExtra("album", album) // передаем альбом для редактирования
+//                intent.putExtra("album", album) // передаем альбом для редактирования
                 startActivityForResult.launch(intent)
             }
         })

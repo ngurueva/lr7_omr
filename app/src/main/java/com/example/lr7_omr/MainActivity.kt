@@ -52,6 +52,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        val btnOpnCSV = findViewById<Button>(R.id.btnOpnCSV)
+        val btnOpnPDF = findViewById<Button>(R.id.btnOpnPDF)
+
+        btnOpnCSV.setOnClickListener {
+            mainViewModel.openCSV(this)
+        }
+
+        btnOpnPDF.setOnClickListener {
+            mainViewModel.openPDF(this)
+        }
+
+
+
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -119,6 +135,8 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.allSongsWithDetails.observe(this) { songs ->
             songAdapter.updateData(songs)
         }
+
+
     }
 
     // Подключаем меню
@@ -187,10 +205,10 @@ class MainActivity : AppCompatActivity() {
             val selectedAlbum = albums[albumPosition]
 
             val song = Song(
-                    title = title,
-                    isFavorite = isFavorite,
-                    authorIdAuthor = selectedAuthor.idAuthor,
-                    albumIdAlbum = selectedAlbum.idAlbum
+                title = title,
+                isFavorite = isFavorite,
+                authorIdAuthor = selectedAuthor.idAuthor,
+                albumIdAlbum = selectedAlbum.idAlbum
             )
             mainViewModel.addSong(song)
             setResult(RESULT_OK)
